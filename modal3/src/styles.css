@@ -29,6 +29,7 @@ html, body {
     height: 100px;
     width: 100px;
 }
+/*can optionaly assign styles to id in css file, or pass them all in through the openModal function*/
 /*#modalDir {
   background-color: black;
   height: 200px;
