@@ -9,13 +9,30 @@
 
         <div id="modal-curtain" ng-click="closeModal()"></div>
 
+        <!--
+can pass in optional object with css properties to be applied to modal
+if you have applied css to the ID in the styles file, pass function true instead of css object
+otherwise modal will just have whatever styles are applied to the modal class in the css file
+first argument must be the id of the modal you want to open
+ -->
         I'm the front page, with no modal.
-        <button type="button" ng-click="openModal('modal-dir', {
+        <button type="button" ng-click="openModal('modalDir', {
           width: '500px',
-          height: '200px'
-        })">Submit</button>
+          height: '500px',
+          backgroundColor: 'white'
+        })">White</button>
 
-        <modal-dir></modal-dir>
+        <button type="button" ng-click="openModal('modalDir', {
+          width: '500px',
+          height: '500px',
+          backgroundColor: 'blue'
+        })">Blue</button>
+
+        <!-- default styles are either the modal class, of the modal ID if given them in the css file -->
+        <button type="button" ng-click="openModal('modalDir')">Default stlyes</button>
+
+        <!-- modals must have the class modal, and a unique id -->
+        <modal-dir class="modal" id="modalDir"></modal-dir>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js" charset="utf-8"></script>
         <script src="app.js" charset="utf-8"></script>

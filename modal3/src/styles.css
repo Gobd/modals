@@ -17,12 +17,20 @@ html, body {
     background-color: rgba(50, 50, 50, 0.92);
     visibility: hidden;
 }
-modal-dir {
+/*this does the positioning for modals, and applies default styles if none are provided when the modal is opened*/
+.modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    background-color: white;
     visibility: hidden;
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
 }
+/*#modalDir {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+}*/

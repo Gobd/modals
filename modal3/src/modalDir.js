@@ -9,5 +9,4 @@ angular.module('app').directive('modalDir', function() {
         }
 
     }
-
 })

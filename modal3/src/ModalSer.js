@@ -5,9 +5,11 @@ angular.module('app').service('modalSer', function() {
         openModal;
 
     this.openModal = function(modalName, css) {
-        openModal = document.getElementsByTagName(modalName)[0];
-        for (var key in css) {
-            openModal.style[key] = css[key];
+        openModal = document.getElementById(modalName);
+        if (css) {
+            for (var key in css) {
+                openModal.style[key] = css[key];
+            }
         }
         body.style.overflow = 'hidden';
         openModal.style.visibility = 'visible';
@@ -20,4 +22,4 @@ angular.module('app').service('modalSer', function() {
         curtain.style.visibility = 'hidden';
     };
 
-})
+});
